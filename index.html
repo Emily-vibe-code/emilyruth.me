@@ -328,7 +328,7 @@
     .project-body{grid-template-columns:1fr;padding:1.75rem 1.25rem;gap:2rem;}
   }
 
-  /* ---------- WORK STORIES ---------- */
+  /* ---------- WORK CASE STUDIES ---------- */
   .story{
     padding:2.25rem 0;
     border-top:1px solid var(--line);
@@ -393,7 +393,7 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#project">Project</a></li>
-    <li><a href="#stories">Stories</a></li>
+    <li><a href="#stories">Case studies</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -411,7 +411,7 @@
 <div class="mobile-panel" id="mobilePanel">
   <a href="#about">About</a>
   <a href="#project">Project</a>
-  <a href="#stories">Stories</a>
+  <a href="#stories">Case studies</a>
   <a href="#experience">Experience</a>
   <a href="#contact">Contact</a>
 </div>
@@ -510,24 +510,62 @@
 
 <section id="stories">
   <div class="section-head">
-    <span class="kicker">Work stories</span>
+    <span class="kicker">Work case studies</span>
     <h2>How I work</h2>
   </div>
+
+  <article class="story">
+    <span class="tag">Malwarebytes &middot; Product Owner</span>
+    <h3>Pushing back on a free-by-default plan</h3>
+    <dl>
+      <dt>The situation</dt>
+      <dd>The proposal was turning on a new feature automatically for all MSPs (managed service providers that handle IT services for their own small business customers) without their consent. The feature would be free to MSPs but still cost us to provide, and the intent was to garner upsells of a complementary feature.</dd>
+      <dt>What I did</dt>
+      <dd>I gathered MSP feedback directly and pulled usage data from Pendo, which pointed to two problems: MSPs want control of what their customers have, and the ROI for the company was not there. The feature flagged Common Vulnerabilities and Exposures (CVEs), which are known security weaknesses in software. Many of those flags weren't actionable. Some weaknesses had no fix yet, some never would because the software was no longer supported, and some were fixed by the MSP's other tools soon after we flagged them. Most MSPs only provide statistics on their customers' security posture without context for those numbers, so this could have alarmed their customers unnecessarily. Many MSPs' customers already had dedicated tools for this very use case and would not purchase the complementary feature anyway. The Pendo data showed that even if half of our MSPs purchased the upsell, it would not recoup the costs of providing the free feature. I presented my findings to VPs and Directors and recommended offering the feature as an optional add-on, so MSPs kept control.</dd>
+      <dt>The result</dt>
+      <dd>Leadership changed course. The feature launched for MSPs as an optional add-on rather than a forced default. Very few MSPs chose to add it, which confirmed the demand wasn't there.</dd>
+    </dl>
+  </article>
+
+  <article class="story">
+    <span class="tag">Malwarebytes &middot; Product Owner</span>
+    <h3>Getting a stalled bundling decision unstuck</h3>
+    <dl>
+      <dt>The situation</dt>
+      <dd>Our features had always been sold à la carte. It was pitched that we should sell in bundles, as we had done with our SMB customers, to grow deal size and set our own pricing. The concept for MSPs had been stalled in long brainstorming sessions for many months. There were too many options, and everyone wanted them structured differently.</dd>
+      <dt>What I did</dt>
+      <dd>I went back to what MSPs had already told us: they didn't want bundles defined for them. They had already established their own bundles of our products to sell to their customers. Creating bundles for them would have required major UI work and forced them into bundles with products they would never sell to their customers. That risked frustrating MSPs enough that we could lose their business. I recommended starting with new customers instead of causing so much rework for existing ones. New customers had no bundles of their own to disrupt, so we would get the revenue upside without the downside, and we could use them as a case study. I made that case to a VP and a C-level leader.</dd>
+      <dt>The result</dt>
+      <dd>Leadership approved the approach, and we quickly closed our first bundle sale to a new customer. At $500k, it was larger than our usual deals, and the VP credited it to me.</dd>
+    </dl>
+  </article>
+
+  <article class="story">
+    <span class="tag">BlackCloak &middot; Product Manager</span>
+    <h3>Shipping the version that helped the most clients first</h3>
+    <dl>
+      <dt>The situation</dt>
+      <dd>Clients were anxious to have their personal information removed quickly to drastically reduce their online footprint. However, permanent removal means getting clients' information taken down from data broker sites, the companies that collect and sell personal information. We request the removals, but each data broker has its own timeline to act on those requests. When clients searched their own names during this wait, they continued to see their information and assumed our services weren't working. I owned the feature to close that gap by hiding search results.</dd>
+      <dt>What I did</dt>
+      <dd>Supporting every search engine would have delayed launch. I scoped the first release to Google, the most widely used engine, which covered the majority of use cases without too much compromise. I chose to move Bing to a later release because of the timeline and technical challenges, even though a larger than average share of our clients use it.</dd>
+      <dt>The result</dt>
+      <dd>Clients could see the difference right away, which helped retention. The feature also became a selling point. Sales could demonstrate how quickly information could be hidden, building trust that prospects' data would be protected soon after purchase.</dd>
+    </dl>
+  </article>
 
   <article class="story">
     <span class="tag">PDQ.com &middot; First Product Owner</span>
     <h3>Building the first backlog and sprint process</h3>
     <dl>
       <dt>The situation</dt>
-      <dd>PDQ.com ran on waterfall. There was no backlog, just a long list of bugs and requested features with nothing prioritized. Work was only added when someone decided to build a feature.</dd>
+      <dd>PDQ.com ran on the waterfall model, a linear approach where each phase must be completely finished before the next one begins. This meant work was disjointed because departments did not collaborate and we didn't have any cross-functional teams. There was no backlog, just a long list of bugs and requested features with nothing prioritized. Work was only added when someone decided to build a feature. Releases happened whenever something was finished, with no set cadence.</dd>
       <dt>What I did</dt>
-      <dd>As the company's first Product Owner, I moved us to Jira and created a real backlog. I set up two-week sprints with the full set of Scrum ceremonies for two teams, and prioritized the backlog using RICE. I also went through the old list and removed every ticket that was no longer relevant.</dd>
+      <dd>As the company's first Product Owner, I moved us to Jira and created a real backlog. I set up two-week sprints with the full set of Scrum ceremonies for two teams, which were now cross-functional. I prioritized the backlog using the RICE and MoSCoW prioritization frameworks with input from all departments, and removed tickets that were no longer relevant.</dd>
       <dt>The result</dt>
-      <dd>With a prioritized backlog driving each sprint, release cadence sped up by 133%.</dd>
+      <dd>With a prioritized backlog for cross-functional teams driving each sprint, we were able to dedicate time to tech debt and create a true release cadence. Releases sped up by 133%, and tech debt was reduced by 80%. Feature decisions were now driven by data, and all departments felt heard.</dd>
     </dl>
   </article>
 
-  <!-- MWB-STORY -->
 </section>
 
 <section id="experience">
